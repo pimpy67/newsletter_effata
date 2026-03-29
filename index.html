@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Newsletter Effata N.1 – I Risultati del 2025</title>
+  <!--
+    ╔══════════════════════════════════════════════════════════╗
+    ║  NEWSLETTER EFFATA ITALIA CHARITY ORGANIZATION ODV       ║
+    ║  N.1 – RESOCONTO RISULTATI 2025                          ║
+    ║                                                          ║
+    ║  ⚙️  TAG PERSONALIZZAZIONE VEREIFICO:                    ║
+    ║  Sostituire [nome] con il tag corretto del tuo piano     ║
+    ║  (es. {nome}, {{nome}} o %nome% — verifica su Vereifico) ║
+    ║                                                          ║
+    ║  🖼️  IMMAGINI: sostituire i percorsi img/ con URL        ║
+    ║  assoluti del server prima dell'invio finale             ║
+    ║                                                          ║
+    ║  🔗  LINK DA AGGIORNARE:                                 ║
+    ║  - [LINK_ISCRIZIONE] → link form iscrizione Vereifico    ║
+    ║  - [LINK_SITO] → https://www.effataitalia.it             ║
+    ╚══════════════════════════════════════════════════════════╝
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ── RESET ── */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Noto Sans', Arial, sans-serif;
+      color: #313131;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    img { max-width: 100%; height: auto; display: block; border: 0; outline: none; }
+    a { text-decoration: none; color: inherit; }
+    table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+
+    /* ── WRAPPER ── */
+    .email-wrapper { width: 100%; background-color: #f2f2f2; padding: 30px 0; }
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+
+    /* ── PREHEADER (nascosto, visibile solo anteprima client) ── */
+    .preheader {
+      display: none !important;
+      visibility: hidden;
+      opacity: 0;
+      color: transparent;
+      height: 0;
+      width: 0;
+      max-height: 0;
+      overflow: hidden;
+      mso-hide: all;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background-color: #10100e;
+      padding: 28px 32px;
+      text-align: center;
+    }
+    .header img { max-width: 140px; margin: 0 auto; }
+    .newsletter-label {
+      color: rgba(255,255,255,0.5);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 14px;
+    }
+
+    /* ── HERO ── */
+    .hero { position: relative; overflow: hidden; }
+    .hero-img { width: 100%; max-height: 400px; object-fit: cover; }
+    .hero-overlay {
+      background: linear-gradient(to top, rgba(16,16,14,0.90) 0%, rgba(16,16,14,0.30) 60%, transparent 100%);
+      padding: 60px 32px 40px;
+      margin-top: -160px;
+      position: relative;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: #ed1c23;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      color: #ffffff;
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .hero h1 span { color: #ed1c23; }
+    .hero-sub {
+      color: rgba(255,255,255,0.80);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ── INTRO ── */
+    .intro { padding: 40px 36px; background: #ffffff; }
+    .intro .greeting {
+      font-size: 22px;
+      font-weight: 700;
+      color: #313131;
+      margin-bottom: 20px;
+    }
+    .intro .greeting span { color: #ed1c23; }
+    .intro p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: #444;
+      margin-bottom: 14px;
+    }
+    .intro p strong { color: #313131; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 3px;
+      background: linear-gradient(to right, #ed1c23, #3b8c6e);
+    }
+
+    /* ── NUMBERS SECTION ── */
+    .numbers-section { background: #10100e; padding: 44px 28px; }
+    .numbers-title {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .numbers-subtitle {
+      color: rgba(255,255,255,0.45);
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    /* grid numeri — table-based per compatibilità email */
+    /* ── RESULTS IMAGE GRID ── */
+    .results-img-wrap { background: #10100e; padding: 0 20px 32px; }
+    .results-img-grid { width: 100%; border-collapse: separate; border-spacing: 6px; }
+    .results-img-grid td { width: 33.33%; vertical-align: top; }
+    .results-img-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+
+    /* ── GALLERY ── */
+    .gallery { padding: 0; }
+    .gallery-table { width: 100%; border-collapse: collapse; }
+    .gallery-table td { padding: 2px; width: 33.33%; }
+    .gallery-table img { width: 100%; height: 160px; object-fit: cover; display: block; }
+
+    /* ── SILVIA QUOTE ── */
+    .silvia-section { background: #f2f2f2; padding: 44px 36px; }
+    .silvia-box {
+      background: #ffffff;
+      border-left: 4px solid #ed1c23;
+      border-radius: 0 8px 8px 0;
+      padding: 30px 28px;
+    }
+    .quote-mark {
+      color: #ed1c23;
+      font-size: 56px;
+      line-height: 0.6;
+      font-family: Georgia, serif;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .silvia-quote {
+      font-size: 15px;
+      font-style: italic;
+      line-height: 1.85;
+      color: #313131;
+      margin-bottom: 24px;
+    }
+    .silvia-author { display: flex; align-items: center; gap: 14px; }
+    .silvia-author img {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid #ed1c23;
+    }
+    .silvia-name {
+      font-weight: 700;
+      font-size: 14px;
+      color: #313131;
+    }
+    .silvia-role { font-size: 12px; color: #ed1c23; margin-top: 2px; }
+
+    /* ── SHARE SECTION ── */
+    .share-section {
+      background: #ed1c23;
+      padding: 56px 36px;
+      text-align: center;
+    }
+    .share-eyebrow {
+      display: inline-block;
+      color: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.45);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+    }
+    .share-section h2 {
+      color: #ffffff;
+      font-size: 40px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      line-height: 1.1;
+    }
+    .share-section p {
+      color: rgba(255,255,255,0.88);
+      font-size: 15px;
+      line-height: 1.8;
+      max-width: 420px;
+      margin: 0 auto 12px;
+    }
+    .share-highlight {
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 18px 28px;
+      max-width: 360px;
+      margin: 20px auto 36px;
+    }
+    .share-highlight strong {
+      display: block;
+      font-size: 22px;
+      color: #ffffff;
+      font-weight: 900;
+      margin-bottom: 5px;
+    }
+    .share-highlight span {
+      font-size: 12px;
+      color: rgba(255,255,255,0.80);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .share-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-share {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 36px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #ffffff;
+      border: 2px solid rgba(255,255,255,0.25);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    .btn-whatsapp:hover {
+      background: linear-gradient(135deg, #1ebe58, #0e7a6e);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+      transform: translateY(-2px);
+    }
+    .btn-email-share {
+      background: #ffffff;
+      color: #ed1c23;
+      border: 2px solid rgba(255,255,255,0.9);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+    .btn-email-share:hover {
+      background: #fff0f0;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.28);
+      transform: translateY(-2px);
+    }
+
+    /* ── SIGNUP CTA ── */
+    .signup-section {
+      background: #10100e;
+      padding: 64px 36px 40px;
+      text-align: center;
+    }
+    .signup-badge {
+      display: inline-block;
+      background: rgba(237,28,35,0.15);
+      color: #ed1c23;
+      border: 1px solid rgba(237,28,35,0.35);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 7px 20px;
+      border-radius: 50px;
+      margin-bottom: 28px;
+    }
+    .signup-section h2 {
+      font-size: 34px;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .signup-section p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.85;
+      max-width: 420px;
+      margin: 0 auto 12px;
+    }
+    .signup-highlights {
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 auto 36px;
+    }
+    .btn-signup {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #ed1c23, #b81219);
+      color: #ffffff;
+      padding: 20px 56px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid rgba(255,255,255,0.20);
+      box-shadow: 0 8px 32px rgba(237,28,35,0.50);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .btn-signup:hover {
+      background: linear-gradient(135deg, #ff2a32, #ed1c23);
+      box-shadow: 0 14px 40px rgba(237,28,35,0.65);
+      transform: translateY(-2px);
+    }
+    .signup-note {
+      margin-top: 20px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.8;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: #10100e;
+      padding: 36px 32px;
+      text-align: center;
+    }
+    .footer img { max-width: 90px; margin: 0 auto 16px; }
+    .footer-name {
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .footer p {
+      color: rgba(255,255,255,0.35);
+      font-size: 11px;
+      line-height: 1.9;
+    }
+    .footer a { color: rgba(255,255,255,0.50); text-decoration: underline; }
+
+    /* ── MOBILE ── */
+    @media screen and (max-width: 480px) {
+      .email-wrapper { padding: 0 !important; }
+      .email-container { border-radius: 0 !important; box-shadow: none !important; }
+      .hero h1 { font-size: 20px !important; }
+      .intro, .silvia-section, .share-section, .signup-section { padding: 32px 20px !important; }
+      .numbers-section { padding: 32px 12px !important; }
+      .number-card { padding: 16px 8px !important; }
+      .number-card .num { font-size: 22px !important; }
+      .share-buttons { flex-direction: column !important; align-items: center !important; }
+      .btn-share { width: 100% !important; text-align: center !important; }
+      .gallery-table img { height: 120px !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Testo preheader: visibile solo nell'anteprima del client email -->
+<div class="preheader">
+  Silvia ti scrive dall'Uganda: 2025 risultati straordinari grazie a te. Scopri i numeri e condividi con chi ami 🌍
+</div>
+
+<div class="email-wrapper">
+<div class="email-container">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <div class="header">
+    <img src="https://effataitalia.it/wp-content/uploads/2026/03/logo1.png" alt="Effata Italia Charity Organization ODV">
+    <div class="newsletter-label">Newsletter &bull; N.1 &bull; 2026</div>
+  </div>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <div class="hero">
+    <img class="hero-img" src="https://effataitalia.it/wp-content/uploads/2026/03/video-Silvia-1024x768-1.jpg" alt="Silvia Marcolin con i bambini in Uganda">
+    <div class="hero-overlay">
+      <div class="hero-tag">Uganda 2025</div>
+      <h1>Un anno di<br><span>miracoli</span> fatti insieme</h1>
+      <p class="hero-sub">Silvia Marcolin ti racconta i risultati<br>che il tuo sostegno ha reso possibili</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════ INTRO ═══════════ -->
+  <div class="intro">
+    <p class="greeting">Caro/a <span>[nome]</span>,</p>
+    <p>
+      Ti scrivo dall'Uganda, dove ogni giorno i miracoli accadono grazie a un filo invisibile
+      che parte dal tuo cuore e arriva fin qui.<br>
+      Il <strong>2025 è stato un anno straordinario</strong> e oggi voglio fermarmi un secondo
+      per dirti semplicemente: <strong>grazie per il prezioso sostegno.</strong>
+    </p>
+    <p>
+      Grazie perché ogni donazione, ogni condivisione, ogni preghiera silenziosa si è trasformata in mattoni, libri, cure e sorrisi.<br>
+      <strong>Guarda con i tuoi occhi cosa abbiamo realizzato insieme.</strong>
+    </p>
+    <p style="font-style: italic; color: #666; font-size: 14px;">
+      — Silvia Marcolin, volontaria Effata in Uganda
+    </p>
+  </div>
+
+  <!-- ═══════════ NUMBERS + RESULTS ═══════════ -->
+  <div class="results-img-wrap">
+    <div style="text-align:center; padding: 36px 0 20px;">
+      <div class="numbers-title">I numeri del 2025</div>
+      <div class="numbers-subtitle">Ogni cifra è una vita che cambia &bull; Grazie a te</div>
+    </div>
+    <table class="results-img-grid">
+      <tr>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/14-case-costruite.jpeg" alt="14 case costruite">
+          <div style="color:#ffffff;font-size:11px;font-weight:700;text-align:center;padding:6px 4px 2px;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">14 case costruite</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/1110-babini-adottati.jpeg" alt="1110 bambini adottati">
+          <div style="color:#ffffff;font-size:11px;font-weight:700;text-align:center;padding:6px 4px 2px;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">1110 bambini adottati</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/150-materassi.jpeg" alt="150 materassi donati">
+          <div style="color:#ffffff;font-size:11px;font-weight:700;text-align:center;padding:6px 4px 2px;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">150 materassi donati</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/12-terreni-affittati.jpeg" alt="12 terreni affittati">
+          <div style="color:#ffffff;font-size:11px;font-weight:700;text-align:center;padding:6px 4px 2px;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">12 terreni affittati</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/34-sedie-a-rotelle.jpeg" alt="34 sedie a rotelle">
+          <div style="color:#ffffff;font-size:11px;font-weight:700;text-align:center;padding:6px 4px 2px;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">34 sedie a rotelle</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/78-animali.jpeg" alt="78 animali donati">
+          <div style="color:#ffffff;font-size:11px;font-weight:700;text-align:center;padding:6px 4px 2px;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">78 animali donati</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/50-bambini-curati.jpeg" alt="50 bambini curati">
+          <div style="color:#ffffff;font-size:11px;font-weight:700;text-align:center;padding:6px 4px 2px;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">50 bambini curati</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/oltre-200-paia-di-scarpe.jpeg" alt="Oltre 200 paia di scarpe">
+          <div style="color:#ffffff;font-size:11px;font-weight:700;text-align:center;padding:6px 4px 2px;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">Oltre 200 paia di scarpe</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/12-terreni-acquistati.jpeg" alt="12 terreni acquistati">
+          <div style="color:#ffffff;font-size:11px;font-weight:700;text-align:center;padding:6px 4px 2px;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">12 terreni acquistati</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ═══════════ GALLERY ═══════════ -->
+  <div class="gallery">
+    <table class="gallery-table">
+      <tr>
+        <td><img src="https://effataitalia.it/wp-content/uploads/2026/03/effata-giochi.jpg" alt="Bambini in Uganda"></td>
+        <td><img src="https://effataitalia.it/wp-content/uploads/2026/03/hanifa.jpeg" alt="Progetto agricolo Effata"></td>
+        <td><img src="https://effataitalia.it/wp-content/uploads/2026/03/effata-camera.jpg" alt="Accoglienza Effata"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════ SILVIA QUOTE ═══════════ -->
+  <div class="silvia-section">
+    <div class="silvia-box">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="silvia-quote">
+        Quando vedo gli occhi di questi bambini brillare mentre tengono in mano un libro,
+        quando una mamma mi abbraccia perché finalmente ha un tetto sicuro per i suoi figli,
+        quando un ragazzo su una sedia a rotelle riesce ad andare a scuola per la prima volta…
+        in quei momenti sento il calore di tutto il vostro affetto arrivare fin qui, dall'altra parte del mondo.<br><br>
+        <strong>Effatà significa "Apriti". E grazie a voi, ogni giorno qualcosa si apre: una porta, un cuore, un futuro.</strong>
+      </p>
+      <div class="silvia-author">
+        <img src="https://effataitalia.it/wp-content/uploads/2026/03/video-Silvia-1024x768-1.jpg" alt="Silvia Marcolin">
+        <div>
+          <div class="silvia-name">Silvia Marcolin</div>
+          <div class="silvia-role">Volontaria Effata &bull; Uganda 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SHARE SECTION ═══════════ -->
+  <div class="share-section">
+    <div class="share-eyebrow">La tua azione conta</div>
+    <h2>Condividi ora</h2>
+    <p>
+      Ti piace quello che facciamo?<br>
+      Più siamo, più bambini possiamo proteggere.
+    </p>
+    <div class="share-highlight">
+      <strong>Aiutaci ad aiutare.</strong>
+      <span>Fallo ora &mdash; clicca e condividi</span>
+    </div>
+
+    <div class="share-buttons">
+
+      <!-- BOTTONE WHATSAPP -->
+      <a class="btn-share btn-whatsapp"
+         href="https://api.whatsapp.com/send?text=Ciao!%20Ho%20ricevuto%20questa%20newsletter%20di%20Effat%C3%A0%20Charity%20e%20sono%20rimasto%20senza%20parole.%20Guarda%20cosa%20stanno%20facendo%20in%20Uganda%20con%20Silvia%20Marcolin.%20Iscriviti%20anche%20tu%20per%20seguire%20questa%20storia%20meravigliosa%3A%20https%3A%2F%2Fwww.effataitalia.it%2Fiscriviti%2F"
+         target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;vertical-align:middle;">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.533 5.86L.057 23.737a.75.75 0 0 0 .921.921l5.877-1.476A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.523-5.184-1.432l-.37-.22-3.833.963.982-3.596-.242-.382A9.961 9.961 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+        Condividi su WhatsApp
+      </a>
+
+      <!-- BOTTONE EMAIL -->
+      <a class="btn-share btn-email-share"
+         href="mailto:?subject=Guarda%20cosa%20Effat%C3%A0%20ha%20fatto%20in%20Uganda%20nel%202025!&body=Ciao%2C%0A%0Avolevo%20condividere%20con%20te%20questa%20storia%20straordinaria.%0AEffat%C3%A0%20Charity%20ha%20raggiunto%20risultati%20incredibili%20in%20Uganda%20nel%202025%20grazie%20al%20sostegno%20di%20tantissime%20persone.%0A%0ASilvia%20Marcolin%2C%20la%20loro%20volontaria%20sul%20campo%2C%20ci%20racconta%20tutto%20nella%20prima%20newsletter.%0AIscriviti%20anche%20tu%3A%20https%3A%2F%2Fwww.effataitalia.it%2Fiscriviti%2F%0A%0AInsieme%20si%20pu%C3%B2%20fare%20ancora%20di%20pi%C3%B9.%0AUn%20abbraccio!">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;vertical-align:middle;">
+          <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        Inoltra via Email
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ═══════════ SIGNUP CTA ═══════════ -->
+  <div class="signup-section">
+    <div class="signup-badge">Hai ricevuto questa mail da un amico?</div>
+    <h2>Entra nel cuore<br>dell'Uganda con noi</h2>
+    <p>
+      Iscriviti alla newsletter di Effatà per ricevere<br>
+      gli aggiornamenti da Silvia e vedere come<br>
+      la tua vicinanza cambia la vita di questi bambini.
+    </p>
+    <p class="signup-highlights">
+      È gratis &nbsp;&bull;&nbsp; È importante &nbsp;&bull;&nbsp; È concreto
+    </p>
+    <a class="btn-signup" href="https://www.effataitalia.it/iscriviti/" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;vertical-align:middle;">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+      Sì, voglio unirmi a Effatà
+    </a>
+    <p class="signup-note">
+      Nessuno spam. Solo storie vere.<br>
+      Puoi annullare l'iscrizione in qualsiasi momento.
+    </p>
+  </div>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <div class="footer">
+    <img src="https://effataitalia.it/wp-content/uploads/2026/03/logo1.png" alt="Effata Italia">
+    <div class="footer-name">Effata Italia Charity Organization ODV</div>
+    <p>
+      Codice fiscale: 92050910261<br>
+      <a href="[LINK_SITO]">www.effataitalia.it</a><br><br>
+      Hai ricevuto questa mail perché sei nel database dei simpatizzanti di Effatà Italia.<br>
+      <a href="[LINK_DISISCRIZIONE]">Annulla iscrizione</a> &bull;
+      <a href="[LINK_PRIVACY]">Privacy Policy</a>
+    </p>
+  </div>
+
+</div><!-- /email-container -->
+</div><!-- /email-wrapper -->
+
+</body>
+</html>

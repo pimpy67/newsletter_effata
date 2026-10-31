@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories Instagram – Effata 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a1a;
+      font-family: 'Noto Sans', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    /* Label slide */
+    .slide-label {
+      color: #888;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    /* Story frame: 9:16 → 390×693px */
+    .story {
+      width: 390px;
+      height: 693px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ─────────────────────────────────────── */
+    /* SLIDE 1 — APERTURA                      */
+    /* ─────────────────────────────────────── */
+    .slide1 {
+      background: #10100e;
+    }
+    .slide1 .bg {
+      position: absolute;
+      inset: 0;
+      background: url('img/video-Silvia--1024x768.jpg') center/cover no-repeat;
+      opacity: 0.55;
+    }
+    .slide1 .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(16,16,14,0.95) 0%, rgba(16,16,14,0.3) 55%, transparent 100%);
+    }
+    .slide1 .content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 32px 28px 40px;
+    }
+    .slide1 .top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .slide1 .top img {
+      height: 32px;
+      filter: brightness(0) invert(1);
+    }
+    .slide1 .top span {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+    .slide1 .bottom .badge {
+      display: inline-block;
+      background: #ed1c23;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      margin-bottom: 16px;
+    }
+    .slide1 .bottom h1 {
+      color: #fff;
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .slide1 .bottom h1 span { color: #ed1c23; }
+    .slide1 .bottom p {
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .slide1 .swipe {
+      color: rgba(255,255,255,0.45);
+      font-size: 11px;
+      text-align: center;
+      letter-spacing: 1px;
+      margin-top: 20px;
+    }
+
+    /* ─────────────────────────────────────── */
+    /* SLIDE 2 — RISULTATI NUMERI              */
+    /* ─────────────────────────────────────── */
+    .slide2 {
+      background: #10100e;
+    }
+    .slide2 .content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 36px 24px 32px;
+    }
+    .slide2 .eyebrow {
+      color: #ed1c23;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .slide2 h2 {
+      color: #fff;
+      font-size: 26px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      flex: 1;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 14px 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .stat-card .num {
+      color: #ed1c23;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card .num.small { font-size: 22px; }
+    .stat-card .label {
+      color: rgba(255,255,255,0.7);
+      font-size: 10px;
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .slide2 .swipe {
+      color: rgba(255,255,255,0.3);
+      font-size: 11px;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    /* ─────────────────────────────────────── */
+    /* SLIDE 3 — FOTO GALLERY                  */
+    /* ─────────────────────────────────────── */
+    .slide3 {
+      background: #000;
+    }
+    .slide3 .photos {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 3px;
+    }
+    .slide3 .photos .main {
+      grid-column: 1 / 3;
+    }
+    .slide3 .photos img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .slide3 .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 50%);
+    }
+    .slide3 .content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+    .slide3 .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+    .slide3 h2 {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .slide3 p {
+      color: rgba(255,255,255,0.75);
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .slide3 .hashtags {
+      color: rgba(255,255,255,0.45);
+      font-size: 11px;
+    }
+
+    /* ─────────────────────────────────────── */
+    /* SLIDE 4 — CITAZIONE SILVIA              */
+    /* ─────────────────────────────────────── */
+    .slide4 {
+      background: #f2f2f2;
+    }
+    .slide4 .content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 44px 32px;
+    }
+    .slide4 .top-bar {
+      width: 40px;
+      height: 4px;
+      background: #ed1c23;
+      margin-bottom: 36px;
+    }
+    .slide4 .quote-mark {
+      color: #ed1c23;
+      font-size: 80px;
+      font-family: Georgia, serif;
+      line-height: 0.7;
+      margin-bottom: 20px;
+    }
+    .slide4 blockquote {
+      font-size: 18px;
+      font-weight: 700;
+      color: #313131;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .slide4 blockquote em {
+      font-style: normal;
+      color: #ed1c23;
+    }
+    .slide4 .author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .slide4 .author img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ed1c23;
+    }
+    .slide4 .author-info .name {
+      font-weight: 700;
+      font-size: 14px;
+      color: #313131;
+    }
+    .slide4 .author-info .role {
+      font-size: 12px;
+      color: #ed1c23;
+    }
+    .slide4 .bottom-logo {
+      margin-top: auto;
+      padding-top: 32px;
+    }
+    .slide4 .bottom-logo img {
+      height: 28px;
+      opacity: 0.25;
+    }
+
+    /* ─────────────────────────────────────── */
+    /* SLIDE 5 — CTA FINALE                    */
+    /* ─────────────────────────────────────── */
+    .slide5 {
+      background: #ed1c23;
+    }
+    .slide5 .content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 44px 32px;
+      text-align: center;
+    }
+    .slide5 img.logo {
+      height: 48px;
+      filter: brightness(0) invert(1);
+      margin-bottom: 32px;
+      opacity: 0.9;
+    }
+    .slide5 .eyebrow {
+      color: rgba(255,255,255,0.7);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 28px;
+    }
+    .slide5 h2 {
+      color: #fff;
+      font-size: 42px;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .slide5 p {
+      color: rgba(255,255,255,0.85);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+    .slide5 .cta-box {
+      background: rgba(255,255,255,0.15);
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 12px;
+      padding: 18px 28px;
+      width: 100%;
+    }
+    .slide5 .cta-box .link-label {
+      color: rgba(255,255,255,0.6);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .slide5 .cta-box .link-url {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .slide5 .arrow {
+      color: rgba(255,255,255,0.5);
+      font-size: 11px;
+      margin-top: 28px;
+      letter-spacing: 1px;
+    }
+
+    /* ─────────────────────────────────────── */
+    /* ISTRUZIONI STAMPA                       */
+    /* ─────────────────────────────────────── */
+    .instructions {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 12px;
+      padding: 28px;
+      max-width: 480px;
+      color: #ccc;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .instructions h3 { color: #fff; margin-bottom: 12px; font-size: 15px; }
+    .instructions code {
+      background: #3a3a3a;
+      color: #ed1c23;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SLIDE 1 — APERTURA                         -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="slide-label">SLIDE 1 / 5 — Apertura</div>
+  <div class="story slide1">
+    <div class="bg"></div>
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="top">
+        <img src="img/logo1.png" alt="Effata">
+        <span>effataitalia.it</span>
+      </div>
+      <div class="bottom">
+        <div class="badge">Uganda · 2025</div>
+        <h1>Un anno di <span>risultati</span> straordinari</h1>
+        <p>Grazie a voi abbiamo raggiunto traguardi che sembravano impossibili.</p>
+        <div class="swipe">↑ SCORRI PER SCOPRIRE ↑</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SLIDE 2 — NUMERI                           -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="slide-label">SLIDE 2 / 5 — I Risultati</div>
+  <div class="story slide2">
+    <div class="content">
+      <div class="eyebrow">Risultati 2025</div>
+      <h2>Quello che<br>abbiamo fatto<br>insieme</h2>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="num">14</div>
+          <div class="label">Case costruite</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">1110</div>
+          <div class="label">Bambini adottati</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">150</div>
+          <div class="label">Materassi donati</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">34</div>
+          <div class="label">Sedie a rotelle</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">78</div>
+          <div class="label">Animali donati</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">50</div>
+          <div class="label">Bambini curati</div>
+        </div>
+        <div class="stat-card">
+          <div class="num small">+200</div>
+          <div class="label">Paia di scarpe</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">12</div>
+          <div class="label">Terreni acquistati</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">12</div>
+          <div class="label">Terreni affittati</div>
+        </div>
+      </div>
+      <div class="swipe">↑ SCORRI ↑</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SLIDE 3 — GALLERY UGANDA                   -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="slide-label">SLIDE 3 / 5 — Foto Uganda</div>
+  <div class="story slide3">
+    <div class="photos">
+      <div class="main">
+        <img src="img/hanifa.jpeg" alt="Hanifa">
+      </div>
+      <div><img src="img/effata-giochi.jpg" alt="Uganda"></div>
+      <div><img src="img/effata-camera.jpg" alt="Camera"></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="tag">📍 Uganda</div>
+      <h2>Ogni foto<br>racconta<br>una storia</h2>
+      <p>Bambini che sorridono, case che crescono, vite che cambiano.</p>
+      <div class="hashtags">#Effata #Uganda2025 #Solidarietà</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SLIDE 4 — CITAZIONE SILVIA                 -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="slide-label">SLIDE 4 / 5 — Citazione</div>
+  <div class="story slide4">
+    <div class="content">
+      <div class="top-bar"></div>
+      <div class="quote-mark">"</div>
+      <blockquote>
+        Ogni euro donato diventa <em>una casa, un sorriso, una speranza</em> per chi ne ha più bisogno.
+      </blockquote>
+      <div class="author">
+        <img src="img/video-Silvia--1024x768.jpg" alt="Silvia">
+        <div class="author-info">
+          <div class="name">Silvia</div>
+          <div class="role">Coordinatrice Uganda · Effata</div>
+        </div>
+      </div>
+      <div class="bottom-logo">
+        <img src="img/logo1.png" alt="Effata">
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SLIDE 5 — CTA                              -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="slide-label">SLIDE 5 / 5 — Call to Action</div>
+  <div class="story slide5">
+    <div class="content">
+      <img class="logo" src="img/logo1.png" alt="Effata">
+      <div class="eyebrow">Fai la differenza</div>
+      <h2>Sostieni<br>Effata</h2>
+      <p>Adotta un bambino, dona il tuo 5×1000 o iscriviti alla nostra newsletter.</p>
+      <div class="cta-box">
+        <div class="link-label">Link in bio 👆</div>
+        <div class="link-url">effataitalia.it</div>
+      </div>
+      <div class="arrow">oppure scrivi UGANDA nei commenti</div>
+    </div>
+  </div>
+
+  <!-- Istruzioni -->
+  <div class="instructions">
+    <h3>Come usare queste Stories</h3>
+    <ol style="padding-left:18px;">
+      <li>Apri questa pagina nel browser (Chrome o Safari)</li>
+      <li>Fai uno <strong>screenshot</strong> di ogni slide singolarmente</li>
+      <li>Ritaglia esattamente il bordo della card (390×693px)</li>
+      <li>Carica le 5 immagini su Instagram come <strong>carosello Stories</strong></li>
+      <li>Sull'ultima slide aggiungi lo <strong>sticker Link</strong> → <code>effataitalia.it</code></li>
+    </ol>
+  </div>
+
+</body>
+</html>

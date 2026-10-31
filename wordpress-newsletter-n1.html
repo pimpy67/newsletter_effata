@@ -1,0 +1,550 @@
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  NEWSLETTER EFFATA N.1 – VERSIONE WORDPRESS                  ║
+  ║                                                              ║
+  ║  Come usare:                                                 ║
+  ║  1. WordPress Admin → Aggiungi nuovo post                    ║
+  ║  2. Titolo: "Newsletter N.1 – I Risultati del 2025"          ║
+  ║  3. Aggiungi blocco "HTML personalizzato"                    ║
+  ║  4. Incolla tutto questo file nel blocco                     ║
+  ║  5. Categoria: Newsletter                                    ║
+  ║  6. Pubblica                                                 ║
+  ║                                                              ║
+  ║  Nota: il CSS è scopato con .effata-nl per evitare           ║
+  ║  conflitti con il tema WordPress.                            ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+  /* ── SCOPE: tutto prefissato con .effata-nl per evitare conflitti col tema ── */
+
+  .effata-nl {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    color: #313131;
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  .effata-nl * { box-sizing: border-box; }
+
+  .effata-nl img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 0;
+  }
+
+  .effata-nl a { text-decoration: none; color: inherit; }
+
+  .effata-nl table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  /* ── CONTAINER ── */
+  .effata-nl .nl-container {
+    background: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  }
+
+  /* ── HEADER ── */
+  .effata-nl .nl-header {
+    background-color: #10100e;
+    padding: 28px 32px;
+    text-align: center;
+  }
+  .effata-nl .nl-header img { max-width: 140px; margin: 0 auto; }
+  .effata-nl .nl-label {
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+
+  /* ── HERO ── */
+  .effata-nl .nl-hero { position: relative; overflow: hidden; }
+  .effata-nl .nl-hero-img { width: 100%; max-height: 400px; object-fit: cover; }
+  .effata-nl .nl-hero-overlay {
+    background: linear-gradient(to top, rgba(16,16,14,0.90) 0%, rgba(16,16,14,0.30) 60%, transparent 100%);
+    padding: 60px 32px 40px;
+    margin-top: -160px;
+    position: relative;
+  }
+  .effata-nl .nl-hero-tag {
+    display: inline-block;
+    background: #ed1c23;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    margin-bottom: 18px;
+  }
+  .effata-nl .nl-hero h1 {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .effata-nl .nl-hero-sub {
+    color: rgba(255,255,255,0.80);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── DIVIDER ── */
+  .effata-nl .nl-divider {
+    height: 3px;
+    background: linear-gradient(to right, #ed1c23, #3b8c6e);
+  }
+
+  /* ── INTRO ── */
+  .effata-nl .nl-intro { padding: 40px 36px; background: #ffffff; }
+  .effata-nl .nl-greeting {
+    font-size: 22px;
+    font-weight: 700;
+    color: #313131;
+    margin-bottom: 20px;
+  }
+  .effata-nl .nl-greeting span { color: #ed1c23; }
+  .effata-nl .nl-intro p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: #444;
+    margin-bottom: 14px;
+  }
+  .effata-nl .nl-intro p strong { color: #313131; }
+
+  /* ── RESULTS GRID ── */
+  .effata-nl .nl-results-wrap { background: #10100e; padding: 0 20px 32px; }
+  .effata-nl .nl-results-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .effata-nl .nl-results-sub {
+    color: rgba(255,255,255,0.45);
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .effata-nl .nl-results-grid { border-collapse: separate; border-spacing: 6px; }
+  .effata-nl .nl-results-grid td { width: 33.33%; vertical-align: top; }
+  .effata-nl .nl-results-grid img { width: 100%; height: auto; display: block; border-radius: 6px; }
+  .effata-nl .nl-result-label {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    padding: 6px 4px 2px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── GALLERY ── */
+  .effata-nl .nl-gallery td { padding: 2px; width: 33.33%; }
+  .effata-nl .nl-gallery img { width: 100%; height: 160px; object-fit: cover; display: block; }
+
+  /* ── SILVIA QUOTE ── */
+  .effata-nl .nl-silvia { background: #f2f2f2; padding: 44px 36px; }
+  .effata-nl .nl-silvia-box {
+    background: #ffffff;
+    border-left: 4px solid #ed1c23;
+    border-radius: 0 8px 8px 0;
+    padding: 30px 28px;
+  }
+  .effata-nl .nl-quote-mark {
+    color: #ed1c23;
+    font-size: 56px;
+    line-height: 0.6;
+    font-family: Georgia, serif;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .effata-nl .nl-silvia-quote {
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.85;
+    color: #313131;
+    margin-bottom: 24px;
+  }
+  .effata-nl .nl-silvia-author { display: flex; align-items: center; gap: 14px; }
+  .effata-nl .nl-silvia-author img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid #ed1c23;
+  }
+  .effata-nl .nl-silvia-name { font-weight: 700; font-size: 14px; color: #313131; }
+  .effata-nl .nl-silvia-role { font-size: 12px; color: #ed1c23; margin-top: 2px; }
+
+  /* ── SHARE ── */
+  .effata-nl .nl-share {
+    background: #ed1c23;
+    padding: 56px 36px;
+    text-align: center;
+  }
+  .effata-nl .nl-share-eyebrow {
+    display: inline-block;
+    color: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.45);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 22px;
+  }
+  .effata-nl .nl-share h2 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    line-height: 1.1;
+  }
+  .effata-nl .nl-share p {
+    color: rgba(255,255,255,0.88);
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 420px;
+    margin: 0 auto 12px;
+  }
+  .effata-nl .nl-share-highlight {
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 18px 28px;
+    max-width: 360px;
+    margin: 20px auto 36px;
+  }
+  .effata-nl .nl-share-highlight strong {
+    display: block;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 900;
+    margin-bottom: 5px;
+  }
+  .effata-nl .nl-share-highlight span {
+    font-size: 12px;
+    color: rgba(255,255,255,0.80);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .effata-nl .nl-share-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .effata-nl .nl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 36px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  .effata-nl .nl-btn-wa {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #ffffff;
+    border: 2px solid rgba(255,255,255,0.25);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+  .effata-nl .nl-btn-wa:hover {
+    background: linear-gradient(135deg, #1ebe58, #0e7a6e);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+    transform: translateY(-2px);
+  }
+  .effata-nl .nl-btn-email {
+    background: #ffffff;
+    color: #ed1c23;
+    border: 2px solid rgba(255,255,255,0.9);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  }
+  .effata-nl .nl-btn-email:hover {
+    background: #fff0f0;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.28);
+    transform: translateY(-2px);
+  }
+
+  /* ── SIGNUP ── */
+  .effata-nl .nl-signup {
+    background: #10100e;
+    padding: 64px 36px 40px;
+    text-align: center;
+  }
+  .effata-nl .nl-signup-badge {
+    display: inline-block;
+    background: rgba(237,28,35,0.15);
+    color: #ed1c23;
+    border: 1px solid rgba(237,28,35,0.35);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 7px 20px;
+    border-radius: 50px;
+    margin-bottom: 28px;
+  }
+  .effata-nl .nl-signup h2 {
+    font-size: 34px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  .effata-nl .nl-signup p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.85;
+    max-width: 420px;
+    margin: 0 auto 12px;
+  }
+  .effata-nl .nl-signup-highlights {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 auto 36px;
+  }
+  .effata-nl .nl-btn-signup {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #ed1c23, #b81219);
+    color: #ffffff;
+    padding: 20px 56px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid rgba(255,255,255,0.20);
+    box-shadow: 0 8px 32px rgba(237,28,35,0.50);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  .effata-nl .nl-btn-signup:hover {
+    background: linear-gradient(135deg, #ff2a32, #ed1c23);
+    box-shadow: 0 14px 40px rgba(237,28,35,0.65);
+    transform: translateY(-2px);
+  }
+  .effata-nl .nl-signup-note {
+    margin-top: 20px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.8;
+  }
+
+  /* ── MOBILE ── */
+  @media screen and (max-width: 480px) {
+    .effata-nl .nl-hero h1 { font-size: 28px !important; }
+    .effata-nl .nl-intro,
+    .effata-nl .nl-silvia,
+    .effata-nl .nl-share,
+    .effata-nl .nl-signup { padding: 32px 20px !important; }
+    .effata-nl .nl-share-buttons { flex-direction: column; align-items: center; }
+    .effata-nl .nl-btn { width: 100%; text-align: center; justify-content: center; }
+    .effata-nl .nl-gallery img { height: 100px !important; }
+  }
+</style>
+
+<div class="effata-nl">
+<div class="nl-container">
+
+  <!-- HEADER -->
+  <div class="nl-header">
+    <img src="https://effataitalia.it/wp-content/uploads/2026/03/logo1.png" alt="Effata Italia Charity Organization ODV">
+    <div class="nl-label">Newsletter &bull; N.1 &bull; 2026</div>
+  </div>
+
+  <!-- HERO -->
+  <div class="nl-hero">
+    <img class="nl-hero-img" src="https://effataitalia.it/wp-content/uploads/2026/03/video-Silvia-1024x768-1.jpg" alt="Silvia Marcolin con i bambini in Uganda">
+    <div class="nl-hero-overlay">
+      <div class="nl-hero-tag">Uganda 2025</div>
+      <h1>Un anno di<br><span style="color:#ff3333;background-color:#10100e;padding:0 4px;border-radius:3px;">miracoli</span> fatti insieme</h1>
+      <p class="nl-hero-sub">Silvia Marcolin ti racconta i risultati<br>che il tuo sostegno ha reso possibili</p>
+    </div>
+  </div>
+
+  <div class="nl-divider"></div>
+
+  <!-- INTRO -->
+  <div class="nl-intro">
+    <p class="nl-greeting">Caro amico di <span>Effatà</span>,</p>
+    <p>
+      Ti scrivo dall'Uganda, dove ogni giorno i miracoli accadono grazie a un filo invisibile
+      che parte dal tuo cuore e arriva fin qui.<br>
+      Il <strong>2025 è stato un anno straordinario</strong> e oggi voglio fermarmi un secondo
+      per dirti semplicemente: <strong>grazie per il prezioso sostegno.</strong>
+    </p>
+    <p>
+      Grazie perché ogni donazione, ogni condivisione, ogni preghiera silenziosa si è trasformata in mattoni, libri, cure e sorrisi.<br>
+      <strong>Guarda con i tuoi occhi cosa abbiamo realizzato insieme.</strong>
+    </p>
+    <p>
+      <strong>Tanti auguri di una serena e felice Pasqua 2026.</strong><br>
+      Che questa festa porti ancora più luce, speranza e gioia — qui in Uganda e nei vostri cuori.
+    </p>
+    <p style="font-style: italic; color: #666; font-size: 14px;">
+      — Silvia Marcolin, volontaria Effata in Uganda
+    </p>
+  </div>
+
+  <!-- RESULTS GRID -->
+  <div class="nl-results-wrap">
+    <div style="text-align:center; padding: 36px 0 20px;">
+      <div class="nl-results-title">I numeri del 2025</div>
+      <div class="nl-results-sub">Ogni cifra è una vita che cambia &bull; Grazie a te</div>
+    </div>
+    <table class="nl-results-grid">
+      <tr>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/14-case-costruite.jpeg" alt="14 case costruite">
+          <div class="nl-result-label">14 case costruite</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/1110-babini-adottati.jpeg" alt="1110 bambini adottati">
+          <div class="nl-result-label">1110 bambini adottati</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/150-materassi.jpeg" alt="150 materassi donati">
+          <div class="nl-result-label">150 materassi donati</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/12-terreni-affittati.jpeg" alt="12 terreni affittati">
+          <div class="nl-result-label">12 terreni affittati</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/34-sedie-a-rotelle.jpeg" alt="34 sedie a rotelle">
+          <div class="nl-result-label">34 sedie a rotelle</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/78-animali.jpeg" alt="78 animali donati">
+          <div class="nl-result-label">78 animali donati</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/50-bambini-curati.jpeg" alt="50 bambini curati">
+          <div class="nl-result-label">50 bambini curati</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/oltre-200-paia-di-scarpe.jpeg" alt="Oltre 200 paia di scarpe">
+          <div class="nl-result-label">Oltre 200 paia di scarpe</div>
+        </td>
+        <td>
+          <img src="https://effataitalia.it/wp-content/uploads/2026/03/12-terreni-acquistati.jpeg" alt="12 terreni acquistati">
+          <div class="nl-result-label">12 terreni acquistati</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- GALLERY -->
+  <div>
+    <table class="nl-gallery">
+      <tr>
+        <td><img src="https://effataitalia.it/wp-content/uploads/2026/03/effata-giochi.jpg" alt="Bambini in Uganda"></td>
+        <td><img src="https://effataitalia.it/wp-content/uploads/2026/03/hanifa.jpeg" alt="Progetto agricolo Effata"></td>
+        <td><img src="https://effataitalia.it/wp-content/uploads/2026/03/effata-camera.jpg" alt="Accoglienza Effata"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="nl-divider"></div>
+
+  <!-- SILVIA QUOTE -->
+  <div class="nl-silvia">
+    <div class="nl-silvia-box">
+      <span class="nl-quote-mark">&ldquo;</span>
+      <p class="nl-silvia-quote">
+        Quando vedo gli occhi di questi bambini brillare mentre tengono in mano un libro,
+        quando una mamma mi abbraccia perché finalmente ha un tetto sicuro per i suoi figli,
+        quando un ragazzo su una sedia a rotelle riesce ad andare a scuola per la prima volta…
+        in quei momenti sento il calore di tutto il vostro affetto arrivare fin qui, dall'altra parte del mondo.<br><br>
+        <strong>Effatà significa "Apriti". E grazie a voi, ogni giorno qualcosa si apre: una porta, un cuore, un futuro.</strong>
+      </p>
+      <div class="nl-silvia-author">
+        <img src="https://effataitalia.it/wp-content/uploads/2026/03/video-Silvia-1024x768-1.jpg" alt="Silvia Marcolin">
+        <div>
+          <div class="nl-silvia-name">Silvia Marcolin</div>
+          <div class="nl-silvia-role">Volontaria Effata &bull; Uganda 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHARE -->
+  <div class="nl-share">
+    <div class="nl-share-eyebrow">La tua azione conta</div>
+    <h2>Condividi ora</h2>
+    <p>Ti piace quello che facciamo?<br>Più siamo, più bambini possiamo proteggere.</p>
+    <div class="nl-share-highlight">
+      <strong>Aiutaci ad aiutare.</strong>
+      <span>Fallo ora &mdash; clicca e condividi</span>
+    </div>
+    <div class="nl-share-buttons">
+      <a class="nl-btn nl-btn-wa"
+         href="https://api.whatsapp.com/send?text=Ciao!%20Seguo%20da%20un%20po%27%20Effat%C3%A0%20e%20l%27ultimo%20aggiornamento%20dall%27Uganda%20mi%20ha%20davvero%20colpito%20%E2%9D%A4%EF%B8%8F%20Silvia%20Marcolin%20sta%20facendo%20un%20lavoro%20incredibile%20sul%20campo.%20Se%20vuoi%20ricevere%20anche%20tu%20queste%20storie%20(belle%20e%20vere)%2C%20iscriviti%20alla%20loro%20newsletter%3A%20https%3A%2F%2Fwww.effataitalia.it%2Fiscriviti%2F"
+         target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.533 5.86L.057 23.737a.75.75 0 0 0 .921.921l5.877-1.476A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.523-5.184-1.432l-.37-.22-3.833.963.982-3.596-.242-.382A9.961 9.961 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+        Condividi su WhatsApp
+      </a>
+      <a class="nl-btn nl-btn-email"
+         href="mailto:?subject=Guarda%20cosa%20fa%20Effat%C3%A0%20in%20Uganda%20%E2%9D%A4%EF%B8%8F&body=Ciao!%20Seguo%20da%20un%20po%27%20Effat%C3%A0%20e%20l%27ultimo%20aggiornamento%20dall%27Uganda%20mi%20ha%20davvero%20colpito%20%E2%9D%A4%EF%B8%8F%20Silvia%20Marcolin%20sta%20facendo%20un%20lavoro%20incredibile%20sul%20campo.%20Se%20vuoi%20ricevere%20anche%20tu%20queste%20storie%20(belle%20e%20vere)%2C%20iscriviti%20alla%20loro%20newsletter%3A%20https%3A%2F%2Fwww.effataitalia.it%2Fiscriviti%2F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        Inoltra via Email
+      </a>
+    </div>
+  </div>
+
+  <!-- SIGNUP -->
+  <div class="nl-signup">
+    <div class="nl-signup-badge">Hai ricevuto questa mail da un amico?</div>
+    <h2>Entra nel cuore<br>dell'Uganda con noi</h2>
+    <p>
+      Iscriviti alla newsletter di Effatà per ricevere<br>
+      gli aggiornamenti da Silvia e vedere come<br>
+      la tua vicinanza cambia la vita di questi bambini.
+    </p>
+    <p class="nl-signup-highlights">
+      È gratis &nbsp;&bull;&nbsp; È importante &nbsp;&bull;&nbsp; È concreto
+    </p>
+    <a class="nl-btn-signup" href="https://www.effataitalia.it/iscriviti/" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+      Sì, voglio unirmi a Effatà
+    </a>
+    <p class="nl-signup-note">
+      Nessuno spam. Solo storie vere.<br>
+      Puoi annullare l'iscrizione in qualsiasi momento.
+    </p>
+  </div>
+
+</div><!-- /nl-container -->
+</div><!-- /effata-nl -->
